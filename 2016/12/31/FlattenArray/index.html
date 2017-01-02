@@ -91,8 +91,8 @@
 并不难，用半生不熟的Swift实现如下：
 1234567891011121314151617181920extension NSArray &amp;#123;        func flatObjects() -&amp;gt; NSArray &amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FlatternArray.md">
-<meta property="og:url" content="http://chudanqin.github.io/2016/12/31/FlatternArray/index.html">
+<meta property="og:title" content="FlattenArray.md">
+<meta property="og:url" content="http://chudanqin.github.io/2016/12/31/FlattenArray/index.html">
 <meta property="og:site_name" content="I See Dead People">
 <meta property="og:description" content="一道面试题，将复合数组转化成一维数组，如输入：
 [1, [2, 3], [4, [5, 6], 7]]
@@ -100,9 +100,9 @@
 [1, 2, 3, 4, 5, 6, 7]
 并不难，用半生不熟的Swift实现如下：
 1234567891011121314151617181920extension NSArray &amp;#123;        func flatObjects() -&amp;gt; NSArray &amp;#123">
-<meta property="og:updated_time" content="2016-12-31T15:51:38.000Z">
+<meta property="og:updated_time" content="2017-01-02T09:37:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FlatternArray.md">
+<meta name="twitter:title" content="FlattenArray.md">
 <meta name="twitter:description" content="一道面试题，将复合数组转化成一维数组，如输入：
 [1, [2, 3], [4, [5, 6], 7]]
 输出：
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://chudanqin.github.io/2016/12/31/FlatternArray/"/>
+  <link rel="canonical" href="http://chudanqin.github.io/2016/12/31/FlattenArray/"/>
 
 
 
 
 
-  <title> FlatternArray.md | I See Dead People </title>
+  <title> FlattenArray.md | I See Dead People </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2016/12/31/FlatternArray/">
+  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2016/12/31/FlattenArray/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="chudanqin">
@@ -279,7 +279,7 @@
             
             
               
-                FlatternArray.md
+                FlattenArray.md
               
             
           </h1>
@@ -357,11 +357,11 @@
 <p>输出：</p>
 <p>[1, 2, 3, 4, 5, 6, 7]</p>
 <p>并不难，用半生不熟的Swift实现如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">extension NSArray &#123;</div><div class="line">    </div><div class="line">    func flatObjects() -&gt; NSArray &#123;</div><div class="line">        let result = NSMutableArray(capacity: 10)</div><div class="line">        _flattern0(self, result: result)</div><div class="line">        return result</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private func _flattern0(_ arr: NSArray, result: NSMutableArray) &#123;</div><div class="line">        for e in arr &#123;</div><div class="line">            if e is NSArray &#123;</div><div class="line">                _flattern0(e as! NSArray, result: result)</div><div class="line">            &#125; else &#123;</div><div class="line">                result.add(e)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">extension NSArray &#123;</div><div class="line">    </div><div class="line">    func flatObjects() -&gt; NSArray &#123;</div><div class="line">        let result = NSMutableArray(capacity: 10)</div><div class="line">        _flatten0(self, result: result)</div><div class="line">        return result</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private func _flatten0(_ arr: NSArray, result: NSMutableArray) &#123;</div><div class="line">        for e in arr &#123;</div><div class="line">            if e is NSArray &#123;</div><div class="line">                _flatten0(e as! NSArray, result: result)</div><div class="line">            &#125; else &#123;</div><div class="line">                result.add(e)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这里没有扩展Array，因为Array是值类型，递归的时候需要inout，感觉用引用类型更合适点。</p>
 <p>还没结束，如果需要实现成迭代器（Iterator）呢？当然，可以先将flatObjects保存起来，然后在next中依次返回。但是如果数组很大，而又只需要迭代一部分数据呢？由于原数组嵌套了数组，其结构和树类似，所以这里提供了一种解决思路（受flatObjects启发）。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">private class TTNode &#123;</div><div class="line">    // nil if it&apos;s head</div><div class="line">    let parent: TTNode?</div><div class="line">    // each elem will be converted into a node if it&apos;s an array</div><div class="line">    let rawElems: NSArray</div><div class="line">    // point to current elem</div><div class="line">    var currentIndex = 0</div><div class="line">    // current node which is operating</div><div class="line">    var currentNode: TTNode?</div><div class="line">    </div><div class="line">    init(_ parent: TTNode?, _ rawElems: NSArray) &#123;</div><div class="line">        self.parent = parent</div><div class="line">        self.rawElems = rawElems.copy() as! NSArray</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func next() -&gt; Any? &#123;</div><div class="line">        if let node = currentNode &#123;</div><div class="line">            if let v = node.next() &#123; // skip empty node</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if currentIndex &lt; rawElems.count &#123;</div><div class="line">            let v = rawElems[currentIndex]</div><div class="line">            currentIndex += 1</div><div class="line">            if v is NSArray &#123;</div><div class="line">                currentNode = TTNode(self, v as! NSArray)</div><div class="line">                return self.next()</div><div class="line">            &#125; else &#123;</div><div class="line">                currentNode = nil</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func hasMore() -&gt; Bool &#123;</div><div class="line">        return currentIndex &lt; rawElems.count</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class TTIterator &#123;</div><div class="line">    </div><div class="line">    private let headNode: TTNode</div><div class="line">    </div><div class="line">    init(_ arr: NSArray) &#123;</div><div class="line">        headNode = TTNode(nil, arr)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func next() -&gt; Any? &#123;</div><div class="line">        repeat &#123;</div><div class="line">            let v = headNode.next()</div><div class="line">            if v != nil &#123;</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125; while headNode.hasMore()</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func hasMore() -&gt; Bool &#123;</div><div class="line">        return headNode.hasMore()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">let array = [1, [], [[2], 3], [4, [5, 6, 7]], 8, [9, [], 10, [11, [], 12], [[13, 14]]], []] as NSArray</div><div class="line"></div><div class="line">let it = TTIterator(array)</div><div class="line">while let v = it.next()&#123;</div><div class="line">    print(v)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>TTNode在这里描述一个类似树的节点，它有一个父节点（如果是根节点，则为null)，并且用一个数组保存了所有子节点，每个子节点都记录了状态（currentIndex和currentNode）。在初始化TTIterator时，迭代器只生成了树的根节点，然后在调用next的时候才去生成节点。从本质上来说，迭代器是一个带有状态的flattern过程（将flattern的每一步骤记录了下来）。这里的关键仍然是使用了递归，将一个稍复杂的问题分解成多个稍简单的问题——你问我下个元素是什么？等等，我找下子节点问问；子节点收到父节点的询问，也同样去问自己的子节点；以此往复，最终查到下一个元素。</p>
+<p>TTNode在这里描述一个类似树的节点，它有一个父节点（如果是根节点，则为null)，并且用一个数组保存了所有子节点，每个子节点都记录了状态（currentIndex和currentNode）。在初始化TTIterator时，迭代器只生成了树的根节点，然后在调用next的时候才去生成节点。从本质上来说，迭代器是一个带有状态的flatten过程（将flatten的每一步骤记录了下来）。这里的关键仍然是使用了递归，将一个稍复杂的问题分解成多个稍简单的问题——你问我下个元素是什么？等等，我找下子节点问问；子节点收到父节点的询问，也同样去问自己的子节点；以此往复，最终查到下一个元素。</p>
 <p>PS：需要考虑嵌套的数组是[]的情况。</p>
 
       
