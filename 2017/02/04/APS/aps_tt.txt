@@ -1,0 +1,30 @@
+var apn = require('apn');
+
+var options = {
+  passphrase: "12345",
+  production: false,
+  pfx: "aps_out.p12",
+};
+
+var apnProvider = new apn.Provider(options);
+
+let deviceToken = "2786ebfb0fb04d56aeffc3c8e135131eb05eb318606006f93266da4d52b39e54";
+
+var note = new apn.Notification();
+
+note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.
+note.badge = 3;
+note.sound = "ping.aiff";
+note.alert = "\uD83D\uDCE7 \u2709 You have a new message";
+note.payload = {'messageFrom': 'John Appleseed'};
+//note.topic = "com.netease.gacha"
+
+apnProvider.send(note, deviceToken).then( (result) => {
+  // see documentation for an explanation of result
+	console.log("sent:", result.sent.length);
+    console.log("failed:", result.failed.length);
+    console.log(result.failed);
+
+});
+
+apnProvider.shutdown();

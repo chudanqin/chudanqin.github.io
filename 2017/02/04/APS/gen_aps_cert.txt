@@ -1,0 +1,44 @@
+## 1. output: aps_out.p12; 2. verify cert: final.pem
+
+cer=$1
+p12=$2
+cert_sign_request=$3
+env=$4
+
+print_usage() {
+	echo 'invalid args: 1.cer; 2.p12; 3.certificateSignRequest; 4.env(optional, either development or production);' 
+}
+
+if test -z $cer; then
+	print_usage
+	exit 1
+fi
+
+if test -z $p12; then
+	print_usage
+	exit 2
+fi
+
+if test -z $cert_sign_request; then
+	print_usage
+	exit 3
+fi
+
+rm final.pem
+rm aps_out.p12
+
+openssl x509 -in $cer -inform DER -out "aps.pem" -outform PEM
+openssl pkcs12 -nocerts -out aps_key.pem -in $p12 
+
+if test $env='development'; then
+	openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert aps.pem -key aps_key.pem
+elif test $env='production'; then
+	openssl s_client -connect gateway.push.apple.com:2195 -cert aps.pem -key aps_key.pem
+fi
+
+#openssl pkcs12 -export -in aps.pem -inkey aps_key.pem -certfile $cert_sign_request -name "aps_out" -out aps_out.p12
+openssl pkcs12 -export -in aps.pem -inkey aps_key.pem -name "aps_out" -out aps_out.p12
+
+cat aps_key.pem aps.pem > final.pem
+
+echo 'output: final.pem aps_out.p12'
