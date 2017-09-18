@@ -84,40 +84,67 @@
 
 
 
-<meta name="description" content="快速验证aps服务有效性
+<meta name="description" content="##Public Cocoapods
+###Steps:
 
-登录苹果开发者官方
-创建开发者证书（csr.certSigningRequest)
-导出开发者证书（Certificates.p12，带私钥)
-导出APNs证书（aps_env.cer)
-openssl生成推送证书用于服务器发送通知（aps_out.p12)
+注册
 
-12345678910111213## shell, convert cer to p12 ...## ste">
+1pod trunk register $(your-email) $(your-username) --verbose
+
+查看注册信息
+
+1pod trunk me
+
+创建共享库@see also
+
+1pod lib create $(your-lib-name)
+
+编辑.podspec
+
+1234567891011121314">
 <meta property="og:type" content="article">
-<meta property="og:title" content="APS">
-<meta property="og:url" content="http://chudanqin.github.io/2017/02/04/APS/index.html">
+<meta property="og:title" content="Create Your Cocoapods">
+<meta property="og:url" content="http://chudanqin.github.io/2017/06/06/CreateYourCocoapods/index.html">
 <meta property="og:site_name" content="THIS IS MY HOUSE">
-<meta property="og:description" content="快速验证aps服务有效性
+<meta property="og:description" content="##Public Cocoapods
+###Steps:
 
-登录苹果开发者官方
-创建开发者证书（csr.certSigningRequest)
-导出开发者证书（Certificates.p12，带私钥)
-导出APNs证书（aps_env.cer)
-openssl生成推送证书用于服务器发送通知（aps_out.p12)
+注册
 
-12345678910111213## shell, convert cer to p12 ...## ste">
-<meta property="og:updated_time" content="2017-02-04T06:00:08.000Z">
+1pod trunk register $(your-email) $(your-username) --verbose
+
+查看注册信息
+
+1pod trunk me
+
+创建共享库@see also
+
+1pod lib create $(your-lib-name)
+
+编辑.podspec
+
+1234567891011121314">
+<meta property="og:updated_time" content="2017-09-18T08:45:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="APS">
-<meta name="twitter:description" content="快速验证aps服务有效性
+<meta name="twitter:title" content="Create Your Cocoapods">
+<meta name="twitter:description" content="##Public Cocoapods
+###Steps:
 
-登录苹果开发者官方
-创建开发者证书（csr.certSigningRequest)
-导出开发者证书（Certificates.p12，带私钥)
-导出APNs证书（aps_env.cer)
-openssl生成推送证书用于服务器发送通知（aps_out.p12)
+注册
 
-12345678910111213## shell, convert cer to p12 ...## ste">
+1pod trunk register $(your-email) $(your-username) --verbose
+
+查看注册信息
+
+1pod trunk me
+
+创建共享库@see also
+
+1pod lib create $(your-lib-name)
+
+编辑.podspec
+
+1234567891011121314">
 
 
 
@@ -145,13 +172,13 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
 
 
 
-  <link rel="canonical" href="http://chudanqin.github.io/2017/02/04/APS/"/>
+  <link rel="canonical" href="http://chudanqin.github.io/2017/06/06/CreateYourCocoapods/"/>
 
 
 
 
 
-  <title> APS | THIS IS MY HOUSE </title>
+  <title> Create Your Cocoapods | THIS IS MY HOUSE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +291,7 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/02/04/APS/">
+  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/06/06/CreateYourCocoapods/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="n0nni1">
@@ -288,7 +315,7 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
             
             
               
-                APS
+                Create Your Cocoapods
               
             
           </h1>
@@ -303,8 +330,8 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-04T11:33:33+08:00">
-                2017-02-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-06T15:17:40+08:00">
+                2017-06-06
               </time>
             
 
@@ -339,21 +366,57 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
       
 
       
-        <p></p><h4>快速验证aps服务有效性</h4><p></p>
+        <p>##Public Cocoapods</p>
+<p>###Steps:</p>
 <ul>
-<li>登录<a href="https://developer.apple.com/" target="_blank" rel="external">苹果开发者官方</a></li>
-<li>创建开发者证书（csr.certSigningRequest)</li>
-<li>导出开发者证书（Certificates.p12，带私钥)</li>
-<li>导出APNs证书（aps_env.cer)</li>
-<li>openssl生成推送证书用于服务器发送通知（aps_out.p12)</li>
+<li>注册</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">## shell, convert cer to p12 ...</div><div class="line">## step 1</div><div class="line">openssl x509 -in Certificates.p12 -inform DER -out &quot;aps.pem&quot; -outform PEM </div><div class="line">openssl pkcs12 -nocerts -out aps_key.pem -in aps.p12 </div><div class="line"></div><div class="line">## step 2</div><div class="line">## for develop</div><div class="line">#openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert aps.pem -key aps_key.pem</div><div class="line">## for production</div><div class="line">openssl s_client -connect gateway.push.apple.com:2195 -cert aps.pem -key aps_key.pem</div><div class="line"></div><div class="line">## step 3 </div><div class="line">openssl pkcs12 -export -in aps.pem -inkey aps_key.pem -name &quot;aps_out&quot; -out aps_out.p12</div></pre></td></tr></table></figure>
-<p></p><h4>验证有效性</h4><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk register $(your-email) $(your-username) --verbose</div></pre></td></tr></table></figure>
 <ul>
-<li>nodejs安装aps，demo如下，node执行即可验证</li>
+<li>查看注册信息</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">## shell</div><div class="line">npm install aps</div><div class="line"></div><div class="line">// javascript</div><div class="line">var apn = require(&apos;apn&apos;);</div><div class="line"></div><div class="line">var options = &#123; </div><div class="line">  passphrase: &quot;12345&quot;, // 导出Certificates.p12时的密码</div><div class="line">  production: false,</div><div class="line">  pfx: &quot;aps_out.p12&quot;,</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var apnProvider = new apn.Provider(options);</div><div class="line"></div><div class="line">let deviceToken = &quot;你的device token&quot;;</div><div class="line"></div><div class="line">var note = new apn.Notification();</div><div class="line"></div><div class="line">note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.</div><div class="line">note.badge = 3;</div><div class="line">note.sound = &quot;ping.aiff&quot;;</div><div class="line">note.alert = &quot;\uD83D\uDCE7 \u2709 You have a new message&quot;;</div><div class="line">note.payload = &#123;&apos;messageFrom&apos;: &apos;John Appleseed&apos;&#125;;</div><div class="line">//note.topic = &quot;com.netease.gacha&quot;</div><div class="line"></div><div class="line">apnProvider.send(note, deviceToken).then( (result) =&gt; &#123;</div><div class="line">  // see documentation for an explanation of result</div><div class="line">    console.log(&quot;sent:&quot;, result.sent.length);</div><div class="line">    console.log(&quot;failed:&quot;, result.failed.length);</div><div class="line">    console.log(result.failed);</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line">apnProvider.shutdown();</div></pre></td></tr></table></figure>
-<p></p><h4>参考文件</h4><br><a href="/2017/02/04/APS/gen_aps_cert.txt" title="gen_aps_cert.txt">gen_aps_cert.txt</a><br><a href="/2017/02/04/APS/aps_tt.txt" title="aps_tt.txt">aps_tt.txt</a><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk me</div></pre></td></tr></table></figure>
+<ul>
+<li>创建共享库<a href="https://guides.cocoapods.org/making/using-pod-lib-create.html" target="_blank" rel="external">@see also</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod lib create $(your-lib-name)</div></pre></td></tr></table></figure>
+<ul>
+<li>编辑.podspec</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.new do |s| </div><div class="line">  s.name             = &apos;_&apos;</div><div class="line">  s.version          = &apos;0.1.0&apos;</div><div class="line">  s.summary          = &apos;_&apos;</div><div class="line"></div><div class="line">  s.description      = &lt;&lt;-DESC</div><div class="line">TODO: Add long description of the pod here.</div><div class="line">                       DESC</div><div class="line"></div><div class="line">  s.homepage         = &apos;https://github.com/_/_&apos;</div><div class="line">  s.license          = &#123; :type =&gt; &apos;MIT&apos;, :file =&gt; &apos;LICENSE&apos; &#125;</div><div class="line">  s.author           = &#123; &apos;_@_.com&apos; =&gt; &apos;_@_.com&apos; &#125;</div><div class="line">  s.source           = &#123; :git =&gt; &apos;https://github.com/_/_.git&apos;, :tag =&gt; s.version.to_s &#125;</div><div class="line"></div><div class="line">  s.ios.deployment_target = &apos;8.0&apos;</div><div class="line"></div><div class="line">  s.source_files = &apos;ITSQLite/Classes/*.&#123;h,m&#125;&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
+<ul>
+<li>验证.podspec合法性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod lib lint _.podspec</div></pre></td></tr></table></figure>
+<ul>
+<li>新建git，添加remote，添加tag</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git remote add origin _</div><div class="line">git tag 0.1.0</div><div class="line">git push -u --tags origin master</div></pre></td></tr></table></figure>
+<ul>
+<li>发布Cocoapods</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk push _.podspec</div></pre></td></tr></table></figure>
+<ul>
+<li>查找Cocoapods</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pod setup</div><div class="line">pod search _</div><div class="line">#如果没有找到</div><div class="line">rm ~/Library/Caches/CocoaPods/search_index.json</div></pre></td></tr></table></figure>
+<ul>
+<li>更新，修改pod版本，打上git tag，提交即可</li>
+</ul>
+<p>##Private Cocoapods</p>
+<ul>
+<li><p>新增Specs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod repo add $(MySpecs) https://your-own-github/.../$(MySpecs).git</div></pre></td></tr></table></figure>
+</li>
+<li><p>新建git repo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init/commit/push-&gt;remote</div></pre></td></tr></table></figure>
+</li>
+<li><p>新建pods</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">pod lib create $(MyFoundation)</div><div class="line">// Q&amp;A to initialize template</div><div class="line">pod install</div><div class="line">// Workspace generated, edit spec if necessary</div><div class="line">pod lib lint </div><div class="line">pod spec lint</div><div class="line">// Make sure git tag has been added before spec lint</div><div class="line">pod repo push $(MySpecs) $(MyFoundation).podspec --allow-warnings</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用pods</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// add below in Podfile first line, the pod install</div><div class="line">source &apos;https://your-own-github/.../$(MySpecs).git&apos;</div><div class="line">target &apos;...&apos; do</div><div class="line">	pod &apos;$(MyFoundation)&apos;, :git =&gt; &apos;$(GitRepo)&apos;</div><div class="line">end</div></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -380,8 +443,8 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/08/OverTheWallsAndFarAway/" rel="next" title="Over The Walls And Far Away">
-                <i class="fa fa-chevron-left"></i> Over The Walls And Far Away
+              <a href="/2017/02/15/Tweaks/" rel="next" title="Tweaks">
+                <i class="fa fa-chevron-left"></i> Tweaks
               </a>
             
           </div>
@@ -389,10 +452,6 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/15/Tweaks/" rel="prev" title="Tweaks">
-                Tweaks <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -439,17 +498,8 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -505,22 +555,6 @@ openssl生成推送证书用于服务器发送通知（aps_out.p12)
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">快速验证aps服务有效性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">验证有效性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">参考文件</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
