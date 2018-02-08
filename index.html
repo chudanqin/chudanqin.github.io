@@ -1,306 +1,384 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<!-- layout.ejs-->
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A website for A-RSnippet Hexo Theme">
+    <meta name="author" content="chudanqin">
+    <meta name="keyword" content="hexo, hexo theme, A-RSnippet, responsive, bootstrap">
+    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="九指扣将 &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/huyingjie/hexo-theme-A-RSnippet&#34; data-icon=&#34;octicon-star&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star huyingjie/hexo-theme-A-RSnippet on GitHub&#34;&gt;Star&lt;/a&gt;" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+    <title>
+        
+        An A-RSnippet Hexo Theme
+        
+    </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="/css/main.css">
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
     
+      <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="/css/highlight.css">
+    
+
+    
+      <script id="dsq-count-scr" src="//hexo-a-rsnippet.disqus.com/count.js" async></script>
+    
+
+
+    
+      <meta name="google-site-verification" content="wtCjI-zcpr2FYwWS3sI4OWzMK9e7VomDrZyxpVUUIng" />
+    
+
+    
+
+    
+
+
     
   
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
-  
 
-  
-
-  
-
-  
     
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="微信号La2yb0ne5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="THIS IS MY HOUSE">
-<meta property="og:url" content="http://chudanqin.github.io/index.html">
-<meta property="og:site_name" content="THIS IS MY HOUSE">
-<meta property="og:description" content="微信号La2yb0ne5">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="THIS IS MY HOUSE">
-<meta name="twitter:description" content="微信号La2yb0ne5">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"always"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-38355881-1', 'auto');
+    ga('send', 'pageview');
 </script>
 
 
 
-  <link rel="canonical" href="http://chudanqin.github.io/"/>
 
 
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-
-
-  <title> THIS IS MY HOUSE </title>
+    <!-- user customization -->
+    <link rel="stylesheet" href="/css/arsnippet.css">
+    <script src="/js/arsnippet.css.js"></script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<style>
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<header>
+  <nav class="navbar navbar-default header-navbar" id="nav-top" data-ispost = "false" data-istags="false" data-ishome = "true" >
+    <div class="container-fluid">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false"  data-target="#website_navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand animated pulse">
+          <a class="brand-logo" href="/">
+            九指扣将 <a class="github-button" href="https://github.com/huyingjie/hexo-theme-A-RSnippet" data-icon="octicon-star" data-show-count="true" aria-label="Star huyingjie/hexo-theme-A-RSnippet on GitHub">Star</a>
+          </a>
+        </span>
+      </div>
+
+      <div class="collapse navbar-collapse" id="website_navbar">
+          <ul class="nav navbar-nav navbar-right">
+              
+                <li>
+                  <a href="/">home</a>
+                </li>
+              
+                <li>
+                  <a href="/tags/">tags</a>
+                </li>
+              
+          </ul>
+      </div>
+  </nav>
+
 
   
+</header>
 
 
-
-
-
-
-
-
-
-
-  
-  
+<!-- Main Content -->
+<!-- index.ejs -->
+<article class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
     
-  
+        <div class="row">
+            <header class="intro-header">
+                <div class="container">
+                    <div class="site-heading text-center">
+                        <div class="about-me">
+                            <!--Sidebar about me: mobile header-->
+                            
+                            <h5>chudanqin</h5>
+                            <p>三流程序员</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        
+</article>
+<div class="container homepage">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/WhatDidiOSDoBeforeMain/">
+        <h2 class="post-title">
+            What did iOS do before main
+        </h2>
+        
+        <div class="post-meta">
+          <span>Feb 4, 2018</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                What did iOS do before main结论
+系统先读取App的可执行文件(Mach-O文件)，从里面获得dyld的路径，然后加载dyld,dyld去初始化运行环境。
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">THIS IS MY HOUSE</span>
-      <span class="logo-line-after"><i></i></span>
+开启缓存策略，加载程序相关依赖库(其中也包含我们的可执行文件)，并对这些库进行链接，最后调用每个依赖库的初始化方..
+            </p>
+        </div>
     </a>
-  </div>
+</div>
+<hr>
+
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/CreateYourCocoapods/">
+        <h2 class="post-title">
+            Create Your Cocoapods
+        </h2>
+        
+        <div class="post-meta">
+          <span>Jun 6, 2017</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                ##Public Cocoapods
+###Steps:
+
+注册
+
+1pod trunk register $(your-email) $(your-username) --verbose
+
+查看注册信息
+
+1pod trunk me
+
+创建共享库@see also
+
+1pod lib crea..
+            </p>
+        </div>
+    </a>
+</div>
+<hr>
+
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/Tweaks/">
+        <h2 class="post-title">
+            Tweaks
+        </h2>
+        
+        <div class="post-meta">
+          <span>Feb 15, 2017</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                dyld: Library not loaded: @rpathTARGETS-&gt;Build Phases-&gt;+New Copy Files Phases@rpath @see Mike Ash
+
+            </p>
+        </div>
+    </a>
+</div>
+<hr>
+
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/APS/">
+        <h2 class="post-title">
+            APS
+        </h2>
+        
+        <div class="post-meta">
+          <span>Feb 4, 2017</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                快速验证aps服务有效性
+
+登录苹果开发者官方
+创建开发者证书（csr.certSigningRequest)
+导出开发者证书（Certificates.p12，带私钥)
+导出APNs证书（aps_env.cer)
+openssl生成推送证书用于服务器发送通知（aps_out.p12)
+
+123..
+            </p>
+        </div>
+    </a>
+</div>
+<hr>
+
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/OverTheWallsAndFarAway/">
+        <h2 class="post-title">
+            Over The Walls And Far Away
+        </h2>
+        
+        <div class="post-meta">
+          <span>Jan 8, 2017</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                之前买的翻墙服务遭到封杀，需要经常更新服务器地址，很是麻烦。可翻墙毕竟是刚需，只好自己动手了。我选择了亚马逊的AWS（可以免费使用一年，只需要一张信用卡即可）。
+首先，需要一个AWS的账号。如果注册中遇到无法接收确认电话的问题，可以提工单给客服（技术顾问是说英文的老外，基本的听说能力即可应付）。..
+            </p>
+        </div>
+    </a>
+</div>
+<hr>
+
+          
+            <div class="post-preview "
+     style="background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb')">
+    <a href="/FlattenArray/">
+        <h2 class="post-title">
+            Flatten Array
+        </h2>
+        
+        <div class="post-meta">
+          <span>Dec 31, 2016</span>
+          
+        </div>
+        <div class="post-content-preview">
+            <p>
+                一道面试题，将复合数组转化成一维数组，如输入：
+[1, [2, 3], [4, [5, 6], 7]]
+输出：
+[1, 2, 3, 4, 5, 6, 7]
+并不难，用半生不熟的Swift实现如下：
+1234567891011121314151617181920extension NSArray ..
+            </p>
+        </div>
+    </a>
+</div>
+<hr>
+
+          
+          <ul class="pager">
     
-      <p class="site-subtitle"></p>
     
+</ul>
+
+        </div>
+        <!-- sidebar-profile.ejs -->
+<div class="
+        col-lg-3 col-lg-offset-0
+        col-md-3 col-md-offset-0
+        col-sm-12
+        col-xs-12
+        sidebar-container
+    ">
+    <section class="visible-md visible-lg" style="padding: 0 18px">
+        <div class="short-about">
+            
+            <h3>chudanqin</h3>
+            
+                <p>三流程序员</p>
+            
+            <hr>
+            <ul class="list-inline">
+                
+                
+                
+
+                
+
+                
+
+                
+                <li>
+                    <a target="_blank" href="https://github.com/chudanqin">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+
+                
+
+            </ul>
+            
+        </div>
+    </section>
 </div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+    </div>
 </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/06/06/CreateYourCocoapods/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="n0nni1">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="THIS IS MY HOUSE">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="THIS IS MY HOUSE" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/06/CreateYourCocoapods/" itemprop="url">
-                  Create Your Cocoapods
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-06T15:17:40+08:00">
-                2017-06-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
+<!-- Footer -->
+<!-- footer.ejs -->
+<footer>
+    <div class="text-center">
+      <ul class="list-inline">
           
-
-          
-            
-          
-
-          
-
           
           
 
@@ -308,856 +386,71 @@
 
           
 
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
           
-            <p>##Public Cocoapods</p>
-<p>###Steps:</p>
-<ul>
-<li>注册</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk register $(your-email) $(your-username) --verbose</div></pre></td></tr></table></figure>
-<ul>
-<li>查看注册信息</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk me</div></pre></td></tr></table></figure>
-<ul>
-<li>创建共享库<a href="https://guides.cocoapods.org/making/using-pod-lib-create.html" target="_blank" rel="external">@see also</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod lib create $(your-lib-name)</div></pre></td></tr></table></figure>
-<ul>
-<li>编辑.podspec</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.new do |s| </div><div class="line">  s.name             = &apos;_&apos;</div><div class="line">  s.version          = &apos;0.1.0&apos;</div><div class="line">  s.summary          = &apos;_&apos;</div><div class="line"></div><div class="line">  s.description      = &lt;&lt;-DESC</div><div class="line">TODO: Add long description of the pod here.</div><div class="line">                       DESC</div><div class="line"></div><div class="line">  s.homepage         = &apos;https://github.com/_/_&apos;</div><div class="line">  s.license          = &#123; :type =&gt; &apos;MIT&apos;, :file =&gt; &apos;LICENSE&apos; &#125;</div><div class="line">  s.author           = &#123; &apos;_@_.com&apos; =&gt; &apos;_@_.com&apos; &#125;</div><div class="line">  s.source           = &#123; :git =&gt; &apos;https://github.com/_/_.git&apos;, :tag =&gt; s.version.to_s &#125;</div><div class="line"></div><div class="line">  s.ios.deployment_target = &apos;8.0&apos;</div><div class="line"></div><div class="line">  s.source_files = &apos;ITSQLite/Classes/*.&#123;h,m&#125;&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
-<ul>
-<li>验证.podspec合法性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod lib lint _.podspec</div></pre></td></tr></table></figure>
-<ul>
-<li>新建git，添加remote，添加tag</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git remote add origin _</div><div class="line">git tag 0.1.0</div><div class="line">git push -u --tags origin master</div></pre></td></tr></table></figure>
-<ul>
-<li>发布Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk push _.podspec</div></pre></td></tr></table></figure>
-<ul>
-<li>查找Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pod setup</div><div class="line">pod search _</div><div class="line">#如果没有找到</div><div class="line">rm ~/Library/Caches/CocoaPods/search_index.json</div></pre></td></tr></table></figure>
-<ul>
-<li>更新，修改pod版本，打上git tag，提交即可</li>
-</ul>
-<p>##Private Cocoapods</p>
-<ul>
-<li><p>新增Specs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod repo add $(MySpecs) https://your-own-github/.../$(MySpecs).git</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建git repo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init/commit/push-&gt;remote</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">pod lib create $(MyFoundation)</div><div class="line">// Q&amp;A to initialize template</div><div class="line">pod install</div><div class="line">// Workspace generated, edit spec if necessary</div><div class="line">pod lib lint </div><div class="line">pod spec lint</div><div class="line">// Make sure git tag has been added before spec lint</div><div class="line">pod repo push $(MySpecs) $(MyFoundation).podspec --allow-warnings</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// add below in Podfile first line, the pod install</div><div class="line">source &apos;https://your-own-github/.../$(MySpecs).git&apos;</div><div class="line">target &apos;...&apos; do</div><div class="line">	pod &apos;$(MyFoundation)&apos;, :git =&gt; &apos;$(GitRepo)&apos;</div><div class="line">end</div></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/02/15/Tweaks/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="n0nni1">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="THIS IS MY HOUSE">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="THIS IS MY HOUSE" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/15/Tweaks/" itemprop="url">
-                  Tweaks
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T23:50:53+08:00">
-                2017-02-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p></p><h3>dyld: Library not loaded: @rpath</h3><br>TARGETS-&gt;Build Phases-&gt;+New Copy Files Phases<br><img src="/2017/02/15/Tweaks/0.png" alt="0.png" title=""><br>@rpath @see <a href="https://www.mikeash.com/pyblog/friday-qa-2009-11-06-linking-and-install-names.html" target="_blank" rel="external">Mike Ash</a><p></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/02/04/APS/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="n0nni1">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="THIS IS MY HOUSE">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="THIS IS MY HOUSE" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/04/APS/" itemprop="url">
-                  APS
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-04T11:33:33+08:00">
-                2017-02-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p></p><h4>快速验证aps服务有效性</h4><p></p>
-<ul>
-<li>登录<a href="https://developer.apple.com/" target="_blank" rel="external">苹果开发者官方</a></li>
-<li>创建开发者证书（csr.certSigningRequest)</li>
-<li>导出开发者证书（Certificates.p12，带私钥)</li>
-<li>导出APNs证书（aps_env.cer)</li>
-<li>openssl生成推送证书用于服务器发送通知（aps_out.p12)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">## shell, convert cer to p12 ...</div><div class="line">## step 1</div><div class="line">openssl x509 -in Certificates.p12 -inform DER -out &quot;aps.pem&quot; -outform PEM </div><div class="line">openssl pkcs12 -nocerts -out aps_key.pem -in aps.p12 </div><div class="line"></div><div class="line">## step 2</div><div class="line">## for develop</div><div class="line">#openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert aps.pem -key aps_key.pem</div><div class="line">## for production</div><div class="line">openssl s_client -connect gateway.push.apple.com:2195 -cert aps.pem -key aps_key.pem</div><div class="line"></div><div class="line">## step 3 </div><div class="line">openssl pkcs12 -export -in aps.pem -inkey aps_key.pem -name &quot;aps_out&quot; -out aps_out.p12</div></pre></td></tr></table></figure>
-<p></p><h4>验证有效性</h4><p></p>
-<ul>
-<li>nodejs安装aps，demo如下，node执行即可验证</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">## shell</div><div class="line">npm install aps</div><div class="line"></div><div class="line">// javascript</div><div class="line">var apn = require(&apos;apn&apos;);</div><div class="line"></div><div class="line">var options = &#123; </div><div class="line">  passphrase: &quot;12345&quot;, // 导出Certificates.p12时的密码</div><div class="line">  production: false,</div><div class="line">  pfx: &quot;aps_out.p12&quot;,</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var apnProvider = new apn.Provider(options);</div><div class="line"></div><div class="line">let deviceToken = &quot;你的device token&quot;;</div><div class="line"></div><div class="line">var note = new apn.Notification();</div><div class="line"></div><div class="line">note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.</div><div class="line">note.badge = 3;</div><div class="line">note.sound = &quot;ping.aiff&quot;;</div><div class="line">note.alert = &quot;\uD83D\uDCE7 \u2709 You have a new message&quot;;</div><div class="line">note.payload = &#123;&apos;messageFrom&apos;: &apos;John Appleseed&apos;&#125;;</div><div class="line">//note.topic = &quot;com.netease.gacha&quot;</div><div class="line"></div><div class="line">apnProvider.send(note, deviceToken).then( (result) =&gt; &#123;</div><div class="line">  // see documentation for an explanation of result</div><div class="line">    console.log(&quot;sent:&quot;, result.sent.length);</div><div class="line">    console.log(&quot;failed:&quot;, result.failed.length);</div><div class="line">    console.log(result.failed);</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line">apnProvider.shutdown();</div></pre></td></tr></table></figure>
-<p></p><h4>参考文件</h4><br><a href="/2017/02/04/APS/gen_aps_cert.txt" title="gen_aps_cert.txt">gen_aps_cert.txt</a><br><a href="/2017/02/04/APS/aps_tt.txt" title="aps_tt.txt">aps_tt.txt</a><p></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2017/01/08/OverTheWallsAndFarAway/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="n0nni1">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="THIS IS MY HOUSE">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="THIS IS MY HOUSE" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/08/OverTheWallsAndFarAway/" itemprop="url">
-                  Over The Walls And Far Away
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-08T13:49:36+08:00">
-                2017-01-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>之前买的翻墙服务遭到封杀，需要经常更新服务器地址，很是麻烦。可翻墙毕竟是刚需，只好自己动手了。我选择了亚马逊的AWS（可以免费使用一年，只需要一张信用卡即可）。</p>
-<p>首先，需要一个<a href="https://aws.amazon.com/" target="_blank" rel="external">AWS</a>的账号。如果注册中遇到无法接收确认电话的问题，可以提工单给客服（技术顾问是说英文的老外，基本的听说能力即可应付）。</p>
-<p>注册成功后需要等待一会才能使用AWS的服务，登录后选择EC2创建一个新实例，然后按照指示完成整个流程即可（注意保存下证书，<a href="http://www.cloudping.info/" target="_blank" rel="external">cloudping.info</a>可以查看下哪个节点延迟比较低）。</p>
-<p><div><img src="/2017/01/08/OverTheWallsAndFarAway/0.png" alt="0.png" title=""></div></p>
-<p><div><img src="/2017/01/08/OverTheWallsAndFarAway/1.png" alt="1.png" title=""></div></p>
-<p><div><img src="/2017/01/08/OverTheWallsAndFarAway/2.png" alt="2.png" title=""></div></p>
-<p><div><br>通过ssh连接到服务器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -i &quot;your_server.pem&quot; your_username@host</div></pre></td></tr></table></figure></div></p>
-<p>安装shadowsocks（用的node）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//先安装node.js和npm</div><div class="line">npm install -g shadowsocks</div></pre></td></tr></table></figure></p>
-<p>修改下配置文件（/usr/local/lib/node_modules/shadowsocks/config.json）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&quot;server&quot;:&quot;your-server-host&quot;,</div><div class="line">  	&quot;server_port&quot;:8388,</div><div class="line">   &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">   &quot;local_port&quot;:1080,</div><div class="line">   &quot;password&quot;:&quot;your-password&quot;,</div><div class="line">   &quot;timeout&quot;:600,</div><div class="line">   &quot;method&quot;:&quot;aes-256-cfb&quot;</div></pre></td></tr></table></figure></p>
-<p>启动shadowsocks server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup ssserver -c /usr/local/lib/node_modules/shadowsocks/config.json 1&gt;/dev/null &amp;</div></pre></td></tr></table></figure></p>
-<p>由于AWS默认只开启了ssh的端口，所以需要在安全组下开放端口。<br><img src="/2017/01/08/OverTheWallsAndFarAway/3.png" alt="3.png" title=""></p>
-<p><a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">shadowsocks客户端</a></p>
-<p>May the force be with you!</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://chudanqin.github.io/2016/12/31/FlattenArray/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="n0nni1">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="THIS IS MY HOUSE">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="THIS IS MY HOUSE" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/31/FlattenArray/" itemprop="url">
-                  Flatten Array
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-31T01:37:14+08:00">
-                2016-12-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+              <li>
+                  <a target="_blank"  href="https://github.com/chudanqin">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
                   </a>
-                </span>
-
-                
-                
-              
-            </span>
+              </li>
           
 
           
+
+          
+
+      </ul>
+     <div class="text-muted copyright">
+            &copy;
             
+            2017 - 2018
+            
+            
+              <i class="fa fa-heart"></i>
+            
+            chudanqin
+        <br>
           
-
-          
-
+              Powered by <a target="_blank" href="https://hexo.io">Hexo</a>
           
           
-
+            |
           
-
           
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
+              Theme - <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet" target="_blank">A-RSnippet</a> v0.1.0
           
-            <p>一道面试题，将复合数组转化成一维数组，如输入：</p>
-<p>[1, [2, 3], [4, [5, 6], 7]]</p>
-<p>输出：</p>
-<p>[1, 2, 3, 4, 5, 6, 7]</p>
-<p>并不难，用半生不熟的Swift实现如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">extension NSArray &#123;</div><div class="line">    </div><div class="line">    func flatObjects() -&gt; NSArray &#123;</div><div class="line">        let result = NSMutableArray(capacity: 10)</div><div class="line">        _flatten0(self, result: result)</div><div class="line">        return result</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private func _flatten0(_ arr: NSArray, result: NSMutableArray) &#123;</div><div class="line">        for e in arr &#123;</div><div class="line">            if e is NSArray &#123;</div><div class="line">                _flatten0(e as! NSArray, result: result)</div><div class="line">            &#125; else &#123;</div><div class="line">                result.add(e)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这里没有扩展Array，因为Array是值类型，递归的时候需要inout，感觉用引用类型更合适点。</p>
-<p>还没结束，如果需要实现成迭代器（Iterator）呢？当然，可以先将flatObjects保存起来，然后在next中依次返回。但是如果数组很大，而又只需要迭代一部分数据呢？由于原数组嵌套了数组，其结构和树类似，所以这里提供了一种解决思路（受flatObjects启发）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">private class TTNode &#123;</div><div class="line">    // nil if it&apos;s head</div><div class="line">    let parent: TTNode?</div><div class="line">    // each elem will be converted into a node if it&apos;s an array</div><div class="line">    let rawElems: NSArray</div><div class="line">    // point to current elem</div><div class="line">    var currentIndex = 0</div><div class="line">    // current node which is operating</div><div class="line">    var currentNode: TTNode?</div><div class="line">    </div><div class="line">    init(_ parent: TTNode?, _ rawElems: NSArray) &#123;</div><div class="line">        self.parent = parent</div><div class="line">        self.rawElems = rawElems.copy() as! NSArray</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func next() -&gt; Any? &#123;</div><div class="line">        if let node = currentNode &#123;</div><div class="line">            if let v = node.next() &#123; // skip empty node</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if currentIndex &lt; rawElems.count &#123;</div><div class="line">            let v = rawElems[currentIndex]</div><div class="line">            currentIndex += 1</div><div class="line">            if v is NSArray &#123;</div><div class="line">                currentNode = TTNode(self, v as! NSArray)</div><div class="line">                return self.next()</div><div class="line">            &#125; else &#123;</div><div class="line">                currentNode = nil</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func hasMore() -&gt; Bool &#123;</div><div class="line">        return currentIndex &lt; rawElems.count</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">class TTIterator &#123;</div><div class="line">    </div><div class="line">    private let headNode: TTNode</div><div class="line">    </div><div class="line">    init(_ arr: NSArray) &#123;</div><div class="line">        headNode = TTNode(nil, arr)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func next() -&gt; Any? &#123;</div><div class="line">        repeat &#123;</div><div class="line">            let v = headNode.next()</div><div class="line">            if v != nil &#123;</div><div class="line">                return v</div><div class="line">            &#125;</div><div class="line">        &#125; while headNode.hasMore()</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func hasMore() -&gt; Bool &#123;</div><div class="line">        return headNode.hasMore()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">let array = [1, [], [[2], 3], [4, [5, 6, 7]], 8, [9, [], 10, [11, [], 12], [[13, 14]]], []] as NSArray</div><div class="line"></div><div class="line">let it = TTIterator(array)</div><div class="line">while let v = it.next()&#123;</div><div class="line">    print(v)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>TTNode在这里描述一个类似树的节点，它有一个父节点（如果是根节点，则为null)，并且用一个数组保存了所有子节点，每个子节点都记录了状态（currentIndex和currentNode）。在初始化TTIterator时，迭代器只生成了树的根节点，然后在调用next的时候才去生成节点。从本质上来说，迭代器是一个带有状态的flatten过程（将flatten的每一步骤记录了下来）。这里的关键仍然是使用了递归，将一个稍复杂的问题分解成多个稍简单的问题——你问我下个元素是什么？等等，我找下子节点问问；子节点收到父节点的询问，也同样去问自己的子节点；以此往复，最终查到下一个元素。</p>
-<p>PS：需要考虑嵌套的数组是[]的情况。</p>
-
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="n0nni1" />
-          <p class="site-author-name" itemprop="name">n0nni1</p>
-          <p class="site-description motion-element" itemprop="description">微信号La2yb0ne5</p>
-        </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-    </div>
-  </aside>
-
-
-        
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">n0nni1</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</footer>
 
-  
+<!-- Custom Theme JavaScript -->
+<script src="/js/main.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
 </script>
 
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
 
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
 
 
 </body>
+
 </html>

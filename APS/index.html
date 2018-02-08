@@ -9,7 +9,7 @@
     <meta name="description" content="A website for A-RSnippet Hexo Theme">
     <meta name="author" content="chudanqin">
     <meta name="keyword" content="hexo, hexo theme, A-RSnippet, responsive, bootstrap">
-    <link rel="canonical" href="http://yoursite.com/tags/">
+    <link rel="canonical" href="http://yoursite.com/APS/">
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
     <link rel="alternate" type="application/atom+xml" title="九指扣将 &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/huyingjie/hexo-theme-A-RSnippet&#34; data-icon=&#34;octicon-star&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star huyingjie/hexo-theme-A-RSnippet on GitHub&#34;&gt;Star&lt;/a&gt;" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,7 +21,7 @@
 
     <title>
         
-        tags｜An A-RSnippet Hexo Theme
+        APS｜An A-RSnippet Hexo Theme
         
     </title>
 
@@ -101,7 +101,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <header>
-  <nav class="navbar navbar-default header-navbar" id="nav-top" data-ispost = "false" data-istags="false" data-ishome = "false" >
+  <nav class="navbar navbar-default header-navbar" id="nav-top" data-ispost = "true" data-istags="false" data-ishome = "false" >
     <div class="container-fluid">
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false"  data-target="#website_navbar">
@@ -145,8 +145,22 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                     <div class="site-heading">
-                        <h1>tags</h1>
+                        <h1>APS</h1>
                         
+                        
+                          <span class="meta">
+                               <span class="meta-item">Author: chudanqin</span>
+                               <span class="meta-item">Date: Feb 4, 2017</span>
+                               
+                                 <span class="meta-item">Updated On: Feb 2, 2018</span>
+                               
+                          </span>
+                          <div class="tags text-center">
+                              Categories: 
+                          </div>
+                          <div class="tags text-center">
+                              Tags: 
+                          </div>
                         
                     </div>
                 </div>
@@ -169,9 +183,38 @@
 </div><hr>
           
           <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
-          
+          <p></p><h4>快速验证aps服务有效性</h4><p></p>
+<ul>
+<li>登录<a href="https://developer.apple.com/" target="_blank" rel="noopener">苹果开发者官方</a></li>
+<li>创建开发者证书（csr.certSigningRequest)</li>
+<li>导出开发者证书（Certificates.p12，带私钥)</li>
+<li>导出APNs证书（aps_env.cer)</li>
+<li>openssl生成推送证书用于服务器发送通知（aps_out.p12)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">## shell, convert cer to p12 ...</span><br><span class="line">## step 1</span><br><span class="line">openssl x509 -in Certificates.p12 -inform DER -out &quot;aps.pem&quot; -outform PEM </span><br><span class="line">openssl pkcs12 -nocerts -out aps_key.pem -in aps.p12 </span><br><span class="line"></span><br><span class="line">## step 2</span><br><span class="line">## for develop</span><br><span class="line">#openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert aps.pem -key aps_key.pem</span><br><span class="line">## for production</span><br><span class="line">openssl s_client -connect gateway.push.apple.com:2195 -cert aps.pem -key aps_key.pem</span><br><span class="line"></span><br><span class="line">## step 3 </span><br><span class="line">openssl pkcs12 -export -in aps.pem -inkey aps_key.pem -name &quot;aps_out&quot; -out aps_out.p12</span><br></pre></td></tr></table></figure>
+<p></p><h4>验证有效性</h4><p></p>
+<ul>
+<li>nodejs安装aps，demo如下，node执行即可验证</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">## shell</span><br><span class="line">npm install aps</span><br><span class="line"></span><br><span class="line">// javascript</span><br><span class="line">var apn = require(&apos;apn&apos;);</span><br><span class="line"></span><br><span class="line">var options = &#123; </span><br><span class="line">  passphrase: &quot;12345&quot;, // 导出Certificates.p12时的密码</span><br><span class="line">  production: false,</span><br><span class="line">  pfx: &quot;aps_out.p12&quot;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var apnProvider = new apn.Provider(options);</span><br><span class="line"></span><br><span class="line">let deviceToken = &quot;你的device token&quot;;</span><br><span class="line"></span><br><span class="line">var note = new apn.Notification();</span><br><span class="line"></span><br><span class="line">note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.</span><br><span class="line">note.badge = 3;</span><br><span class="line">note.sound = &quot;ping.aiff&quot;;</span><br><span class="line">note.alert = &quot;\uD83D\uDCE7 \u2709 You have a new message&quot;;</span><br><span class="line">note.payload = &#123;&apos;messageFrom&apos;: &apos;John Appleseed&apos;&#125;;</span><br><span class="line">//note.topic = &quot;com.netease.gacha&quot;</span><br><span class="line"></span><br><span class="line">apnProvider.send(note, deviceToken).then( (result) =&gt; &#123;</span><br><span class="line">  // see documentation for an explanation of result</span><br><span class="line">    console.log(&quot;sent:&quot;, result.sent.length);</span><br><span class="line">    console.log(&quot;failed:&quot;, result.failed.length);</span><br><span class="line">    console.log(result.failed);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">apnProvider.shutdown();</span><br></pre></td></tr></table></figure>
+<p></p><h4>参考文件</h4><br><a href="/APS/gen_aps_cert.txt" title="gen_aps_cert.txt">gen_aps_cert.txt</a><br><a href="/APS/aps_tt.txt" title="aps_tt.txt">aps_tt.txt</a><p></p>
+
           
           <hr>
+          <ul class="pager">
+              
+              <li class="previous">
+                  <a href="/Tweaks/" data-toggle="tooltip" data-placement="left"
+                     title="Tweaks">&larr; Previous Post</a>
+              </li>
+              
+              
+              <li class="next">
+                  <a href="/OverTheWallsAndFarAway/" data-toggle="tooltip" data-placement="top"
+                     title="Over The Walls And Far Away">Next Post&rarr;</a>
+              </li>
+              
+          </ul>
         
   <br>
   
@@ -181,7 +224,7 @@
       <script>
       var disqus_shortname = 'hexo-a-rsnippet';
       
-      var disqus_url = 'http://yoursite.com/tags/index.html';
+      var disqus_url = 'http://yoursite.com/APS/';
       
       (function(){
         var dsq = document.createElement('script');
@@ -205,7 +248,7 @@
     <div class="toc-wrap">
         Table of Contents
         
-          
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">快速验证aps服务有效性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">验证有效性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">参考文件</span></a></li></ol>
         
     </div>
   </div>
