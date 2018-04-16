@@ -9,7 +9,7 @@
     <meta name="description" content="A website for A-RSnippet Hexo Theme">
     <meta name="author" content="Unnamed">
     <meta name="keyword" content="hexo, hexo theme, A-RSnippet, responsive, bootstrap">
-    <link rel="canonical" href="http://yoursite.com/CreateYourCocoapods/">
+    <link rel="canonical" href="http://yoursite.com/xcodebuild/">
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
     <link rel="alternate" type="application/atom+xml" title="九指扣将 &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/huyingjie/hexo-theme-A-RSnippet&#34; data-icon=&#34;octicon-star&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star huyingjie/hexo-theme-A-RSnippet on GitHub&#34;&gt;Star&lt;/a&gt;" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,7 +21,7 @@
 
     <title>
         
-        Create Your Cocoapods｜An A-RSnippet Hexo Theme
+        xcodebuild｜An A-RSnippet Hexo Theme
         
     </title>
 
@@ -145,14 +145,14 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                     <div class="site-heading">
-                        <h1>Create Your Cocoapods</h1>
+                        <h1>xcodebuild</h1>
                         
                         
                           <span class="meta">
                                <span class="meta-item">Author: Unnamed</span>
-                               <span class="meta-item">Date: Jun 6, 2017</span>
+                               <span class="meta-item">Date: Apr 16, 2018</span>
                                
-                                 <span class="meta-item">Updated On: Feb 2, 2018</span>
+                                 <span class="meta-item">Updated On: Apr 16, 2018</span>
                                
                           </span>
                           <div class="tags text-center">
@@ -183,71 +183,17 @@
 </div><hr>
           
           <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
-          <p>##Public Cocoapods</p>
-<p>###Steps:</p>
-<ul>
-<li>注册</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk register $(your-email) $(your-username) --verbose</span><br></pre></td></tr></table></figure>
-<ul>
-<li>查看注册信息</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk me</span><br></pre></td></tr></table></figure>
-<ul>
-<li>创建共享库<a href="https://guides.cocoapods.org/making/using-pod-lib-create.html" target="_blank" rel="noopener">@see also</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib create $(your-lib-name)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>编辑.podspec</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Pod::Spec.new do |s| </span><br><span class="line">  s.name             = &apos;_&apos;</span><br><span class="line">  s.version          = &apos;0.1.0&apos;</span><br><span class="line">  s.summary          = &apos;_&apos;</span><br><span class="line"></span><br><span class="line">  s.description      = &lt;&lt;-DESC</span><br><span class="line">TODO: Add long description of the pod here.</span><br><span class="line">                       DESC</span><br><span class="line"></span><br><span class="line">  s.homepage         = &apos;https://github.com/_/_&apos;</span><br><span class="line">  s.license          = &#123; :type =&gt; &apos;MIT&apos;, :file =&gt; &apos;LICENSE&apos; &#125;</span><br><span class="line">  s.author           = &#123; &apos;_@_.com&apos; =&gt; &apos;_@_.com&apos; &#125;</span><br><span class="line">  s.source           = &#123; :git =&gt; &apos;https://github.com/_/_.git&apos;, :tag =&gt; s.version.to_s &#125;</span><br><span class="line"></span><br><span class="line">  s.ios.deployment_target = &apos;8.0&apos;</span><br><span class="line"></span><br><span class="line">  s.source_files = &apos;ITSQLite/Classes/*.&#123;h,m&#125;&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<ul>
-<li>验证.podspec合法性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib lint _.podspec</span><br></pre></td></tr></table></figure>
-<ul>
-<li>新建git，添加remote，添加tag</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin _</span><br><span class="line">git tag 0.1.0</span><br><span class="line">git push -u --tags origin master</span><br></pre></td></tr></table></figure>
-<ul>
-<li>发布Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk push _.podspec</span><br></pre></td></tr></table></figure>
-<ul>
-<li>查找Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br><span class="line">pod search _</span><br><span class="line">#如果没有找到</span><br><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更新，修改pod版本，打上git tag，提交即可</li>
-</ul>
-<p>##Private Cocoapods</p>
-<ul>
-<li><p>新增Specs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add $(MySpecs) https://your-own-github/.../$(MySpecs).git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建git repo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init/commit/push-&gt;remote</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pod lib create $(MyFoundation)</span><br><span class="line">// Q&amp;A to initialize template</span><br><span class="line">pod install</span><br><span class="line">// Workspace generated, edit spec if necessary</span><br><span class="line">pod lib lint </span><br><span class="line">pod spec lint</span><br><span class="line">// Make sure git tag has been added before spec lint</span><br><span class="line">pod repo push $(MySpecs) $(MyFoundation).podspec --allow-warnings</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// add below in Podfile first line, the pod install</span><br><span class="line">source &apos;https://your-own-github/.../$(MySpecs).git&apos;</span><br><span class="line">target &apos;...&apos; do</span><br><span class="line">	pod &apos;$(MyFoundation)&apos;, :git =&gt; &apos;$(GitRepo)&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
-</ul>
+          <p>写了一个脚本，用来生成 Framework，将其放在工程目录（.xcodeproj）下即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span> test PROJECT</span><br><span class="line">PROJECT=$&#123;1&#125;</span><br><span class="line">if [ -z $&#123;PROJECT&#125; ]; then</span><br><span class="line">PROJECT=(`find . -name "*.xcodeproj" | head -n 1 | xargs basename`)</span><br><span class="line">fi</span><br><span class="line">if [ -z $&#123;PROJECT&#125; ]; then</span><br><span class="line">echo "PROJECT not found"</span><br><span class="line">exit -1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> test PROJECT_NAME</span><br><span class="line">PROJECT_NAME=$&#123;2&#125;</span><br><span class="line">if [ -z $&#123;PROJECT_NAME&#125; ]; then</span><br><span class="line"><span class="meta">#</span> extension="$&#123;filename##*.&#125;"</span><br><span class="line">PROJECT_NAME="$&#123;PROJECT%.*&#125;"</span><br><span class="line">fi</span><br><span class="line">if [ -z $&#123;PROJECT_NAME&#125; ]; then</span><br><span class="line">echo "PROJECT_NAME not found"</span><br><span class="line">exit -2</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>test CONFIGURATION</span><br><span class="line">CONFIGURATION=$&#123;3&#125;</span><br><span class="line">if [ -z $&#123;CONFIGURATION&#125; ]; then</span><br><span class="line">CONFIGURATION="Release"</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">echo "args: $&#123;PROJECT&#125;, $&#123;PROJECT_NAME&#125;, $&#123;CONFIGURATION&#125;"</span><br><span class="line"></span><br><span class="line">BUILD_DIR="./build"</span><br><span class="line">OUTPUT_DIR=$&#123;BUILD_DIR&#125;/$&#123;CONFIGURATION&#125;-universal</span><br><span class="line">echo "OUTPUT_DIR: $&#123;OUTPUT_DIR&#125;"</span><br><span class="line"></span><br><span class="line">rm -fr $&#123;BUILD_DIR&#125;/*</span><br><span class="line"></span><br><span class="line">xcodebuild -target "$&#123;PROJECT_NAME&#125;" ONLY_ACTIVE_ARCH=NO -configuration $&#123;CONFIGURATION&#125; -sdk iphoneos -arch arm64 -arch armv7s -arch armv7 clean build </span><br><span class="line"></span><br><span class="line">xcodebuild -target "$&#123;PROJECT_NAME&#125;" ONLY_ACTIVE_ARCH=NO -configuration $&#123;CONFIGURATION&#125; -sdk iphonesimulator -arch x86_64 -arch i386 clean build </span><br><span class="line"></span><br><span class="line">DEVICE_FRAMEWORK_PATH="$&#123;BUILD_DIR&#125;/$&#123;CONFIGURATION&#125;-iphoneos/"</span><br><span class="line">echo "DEVICE_FRAMEWORK_PATH: $&#123;DEVICE_FRAMEWORK_PATH&#125;"</span><br><span class="line"></span><br><span class="line">cp -R "$&#123;DEVICE_FRAMEWORK_PATH&#125;" "$&#123;OUTPUT_DIR&#125;"</span><br><span class="line"></span><br><span class="line">lipo -create -output "$&#123;OUTPUT_DIR&#125;/$&#123;PROJECT_NAME&#125;.framework/$&#123;PROJECT_NAME&#125;" "$&#123;BUILD_DIR&#125;/$&#123;CONFIGURATION&#125;-iphoneos/$&#123;PROJECT_NAME&#125;.framework/$&#123;PROJECT_NAME&#125;" "$&#123;BUILD_DIR&#125;/$&#123;CONFIGURATION&#125;-iphonesimulator/$&#123;PROJECT_NAME&#125;.framework/$&#123;PROJECT_NAME&#125;"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># end</span><br></pre></td></tr></table></figure>
 
           
           <hr>
           <ul class="pager">
               
-              <li class="previous">
-                  <a href="/WhatDidiOSDoBeforeMain/" data-toggle="tooltip" data-placement="left"
-                     title="What did iOS do before main">&larr; Previous Post</a>
-              </li>
-              
               
               <li class="next">
-                  <a href="/Tweaks/" data-toggle="tooltip" data-placement="top"
-                     title="Tweaks">Next Post&rarr;</a>
+                  <a href="/iOSTips/" data-toggle="tooltip" data-placement="top"
+                     title="iOSTips">Next Post&rarr;</a>
               </li>
               
           </ul>
@@ -260,7 +206,7 @@
       <script>
       var disqus_shortname = 'hexo-a-rsnippet';
       
-      var disqus_url = 'http://yoursite.com/CreateYourCocoapods/';
+      var disqus_url = 'http://yoursite.com/xcodebuild/';
       
       (function(){
         var dsq = document.createElement('script');

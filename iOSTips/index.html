@@ -9,7 +9,7 @@
     <meta name="description" content="A website for A-RSnippet Hexo Theme">
     <meta name="author" content="Unnamed">
     <meta name="keyword" content="hexo, hexo theme, A-RSnippet, responsive, bootstrap">
-    <link rel="canonical" href="http://yoursite.com/CreateYourCocoapods/">
+    <link rel="canonical" href="http://yoursite.com/iOSTips/">
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
     <link rel="alternate" type="application/atom+xml" title="九指扣将 &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/huyingjie/hexo-theme-A-RSnippet&#34; data-icon=&#34;octicon-star&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star huyingjie/hexo-theme-A-RSnippet on GitHub&#34;&gt;Star&lt;/a&gt;" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,7 +21,7 @@
 
     <title>
         
-        Create Your Cocoapods｜An A-RSnippet Hexo Theme
+        iOSTips｜An A-RSnippet Hexo Theme
         
     </title>
 
@@ -145,14 +145,14 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                     <div class="site-heading">
-                        <h1>Create Your Cocoapods</h1>
+                        <h1>iOSTips</h1>
                         
                         
                           <span class="meta">
                                <span class="meta-item">Author: Unnamed</span>
-                               <span class="meta-item">Date: Jun 6, 2017</span>
+                               <span class="meta-item">Date: Feb 28, 2018</span>
                                
-                                 <span class="meta-item">Updated On: Feb 2, 2018</span>
+                                 <span class="meta-item">Updated On: Feb 28, 2018</span>
                                
                           </span>
                           <div class="tags text-center">
@@ -183,71 +183,22 @@
 </div><hr>
           
           <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
-          <p>##Public Cocoapods</p>
-<p>###Steps:</p>
-<ul>
-<li>注册</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk register $(your-email) $(your-username) --verbose</span><br></pre></td></tr></table></figure>
-<ul>
-<li>查看注册信息</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk me</span><br></pre></td></tr></table></figure>
-<ul>
-<li>创建共享库<a href="https://guides.cocoapods.org/making/using-pod-lib-create.html" target="_blank" rel="noopener">@see also</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib create $(your-lib-name)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>编辑.podspec</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Pod::Spec.new do |s| </span><br><span class="line">  s.name             = &apos;_&apos;</span><br><span class="line">  s.version          = &apos;0.1.0&apos;</span><br><span class="line">  s.summary          = &apos;_&apos;</span><br><span class="line"></span><br><span class="line">  s.description      = &lt;&lt;-DESC</span><br><span class="line">TODO: Add long description of the pod here.</span><br><span class="line">                       DESC</span><br><span class="line"></span><br><span class="line">  s.homepage         = &apos;https://github.com/_/_&apos;</span><br><span class="line">  s.license          = &#123; :type =&gt; &apos;MIT&apos;, :file =&gt; &apos;LICENSE&apos; &#125;</span><br><span class="line">  s.author           = &#123; &apos;_@_.com&apos; =&gt; &apos;_@_.com&apos; &#125;</span><br><span class="line">  s.source           = &#123; :git =&gt; &apos;https://github.com/_/_.git&apos;, :tag =&gt; s.version.to_s &#125;</span><br><span class="line"></span><br><span class="line">  s.ios.deployment_target = &apos;8.0&apos;</span><br><span class="line"></span><br><span class="line">  s.source_files = &apos;ITSQLite/Classes/*.&#123;h,m&#125;&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<ul>
-<li>验证.podspec合法性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib lint _.podspec</span><br></pre></td></tr></table></figure>
-<ul>
-<li>新建git，添加remote，添加tag</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin _</span><br><span class="line">git tag 0.1.0</span><br><span class="line">git push -u --tags origin master</span><br></pre></td></tr></table></figure>
-<ul>
-<li>发布Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk push _.podspec</span><br></pre></td></tr></table></figure>
-<ul>
-<li>查找Cocoapods</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br><span class="line">pod search _</span><br><span class="line">#如果没有找到</span><br><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更新，修改pod版本，打上git tag，提交即可</li>
-</ul>
-<p>##Private Cocoapods</p>
-<ul>
-<li><p>新增Specs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add $(MySpecs) https://your-own-github/.../$(MySpecs).git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建git repo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init/commit/push-&gt;remote</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pod lib create $(MyFoundation)</span><br><span class="line">// Q&amp;A to initialize template</span><br><span class="line">pod install</span><br><span class="line">// Workspace generated, edit spec if necessary</span><br><span class="line">pod lib lint </span><br><span class="line">pod spec lint</span><br><span class="line">// Make sure git tag has been added before spec lint</span><br><span class="line">pod repo push $(MySpecs) $(MyFoundation).podspec --allow-warnings</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用pods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// add below in Podfile first line, the pod install</span><br><span class="line">source &apos;https://your-own-github/.../$(MySpecs).git&apos;</span><br><span class="line">target &apos;...&apos; do</span><br><span class="line">	pod &apos;$(MyFoundation)&apos;, :git =&gt; &apos;$(GitRepo)&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
-</ul>
+          <h2 id="null-resettable"><a href="#null-resettable" class="headerlink" title="null_resettable"></a>null_resettable</h2><p>可设置为 nil，但是获取的时候不为 nil。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@interface UIViewController ...</span><br><span class="line"></span><br><span class="line">@property(null_resettable, nonatomic,strong) UIView *view; // The getter first invokes [self loadView] if the view hasn&apos;t been set yet. Subclasses must call super if they override the setter or getter.</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 
           
           <hr>
           <ul class="pager">
               
               <li class="previous">
-                  <a href="/WhatDidiOSDoBeforeMain/" data-toggle="tooltip" data-placement="left"
-                     title="What did iOS do before main">&larr; Previous Post</a>
+                  <a href="/xcodebuild/" data-toggle="tooltip" data-placement="left"
+                     title="xcodebuild">&larr; Previous Post</a>
               </li>
               
               
               <li class="next">
-                  <a href="/Tweaks/" data-toggle="tooltip" data-placement="top"
-                     title="Tweaks">Next Post&rarr;</a>
+                  <a href="/OSAtomic/" data-toggle="tooltip" data-placement="top"
+                     title="OSAtomic">Next Post&rarr;</a>
               </li>
               
           </ul>
@@ -260,7 +211,7 @@
       <script>
       var disqus_shortname = 'hexo-a-rsnippet';
       
-      var disqus_url = 'http://yoursite.com/CreateYourCocoapods/';
+      var disqus_url = 'http://yoursite.com/iOSTips/';
       
       (function(){
         var dsq = document.createElement('script');
@@ -284,7 +235,7 @@
     <div class="toc-wrap">
         Table of Contents
         
-          
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null-resettable"><span class="toc-number">1.</span> <span class="toc-text">null_resettable</span></a></li></ol>
         
     </div>
   </div>
