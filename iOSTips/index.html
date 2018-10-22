@@ -152,7 +152,7 @@
                                <span class="meta-item">Author: Unnamed</span>
                                <span class="meta-item">Date: Feb 28, 2018</span>
                                
-                                 <span class="meta-item">Updated On: Feb 28, 2018</span>
+                                 <span class="meta-item">Updated On: Jun 27, 2018</span>
                                
                           </span>
                           <div class="tags text-center">
@@ -185,6 +185,23 @@
           <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
           <h2 id="null-resettable"><a href="#null-resettable" class="headerlink" title="null_resettable"></a>null_resettable</h2><p>可设置为 nil，但是获取的时候不为 nil。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@interface UIViewController ...</span><br><span class="line"></span><br><span class="line">@property(null_resettable, nonatomic,strong) UIView *view; // The getter first invokes [self loadView] if the view hasn&apos;t been set yet. Subclasses must call super if they override the setter or getter.</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h2 id="UIView-amp-CALayer"><a href="#UIView-amp-CALayer" class="headerlink" title="UIView &amp; CALayer"></a>UIView &amp; CALayer</h2><ul>
+<li><p>CALayer.contents 之所以类型为 id，是因为在 Mac OS 系统上，这个属性可以是 CGImage，也可以是 NSImage。</p>
+</li>
+<li><p>UIView.contentMode 等价于 CALayer.contentGravity。</p>
+</li>
+<li><p>UIView.contentScaleFactor 等价于 CALayer.contentsScale，比如在 Retina 显示屏上，该值设为 2.0，则每 2*2 的像素点对于到 1*1 的逻辑点。</p>
+</li>
+<li><p>UIView.clipsToBounds 等价于 CALayer.masksToBounds</p>
+</li>
+<li><p>CALayer.contentsRect 默认为 {0, 0, 1, 1}，如 {0.25, 0.25, 0.5, 0.5} 表示 contents 的中间部分可见。</p>
+</li>
+<li><p>CALayer.contentsCenter 默认为 {0, 0, 1, 1}，如图。</p>
+<img src="/iOSTips/0.png">
+</li>
+</ul>
+<h2 id="NSFrozenDictionaryM"><a href="#NSFrozenDictionaryM" class="headerlink" title="NSFrozenDictionaryM"></a>NSFrozenDictionaryM</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableDictionary</span> *d = [<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">[d <span class="keyword">copy</span>]; <span class="comment">// -&gt; __NSFrozenDictionaryM</span></span><br></pre></td></tr></table></figure>
+<h2 id="NSTaggedPointerString"><a href="#NSTaggedPointerString" class="headerlink" title="NSTaggedPointerString"></a>NSTaggedPointerString</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// NSTaggedPointerString 并不是一个真正的对象，64 位中的一部分用作存储数据，不同版本的算法有变</span><br><span class="line">// 常量应该是不会转成 NSTaggedPointerString</span><br><span class="line">NSMutableString *mutable = [NSMutableString string];</span><br><span class="line">NSString *immutable;</span><br><span class="line">char c = &apos;a&apos;;</span><br><span class="line">uintptr_t ptr;</span><br><span class="line">do &#123;</span><br><span class="line">[mutable appendFormat:@&quot;%c&quot;, c++];</span><br><span class="line">immutable = [mutable copy];</span><br><span class="line">ptr = (uintptr_t)immutable;</span><br><span class="line">NSLog(@&quot;0x%016lx %@ %@&quot;, ptr, immutable, immutable.class);</span><br><span class="line">&#125; while(c &lt;= &apos;z&apos;);</span><br></pre></td></tr></table></figure>
 
           
           <hr>
@@ -235,7 +252,7 @@
     <div class="toc-wrap">
         Table of Contents
         
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null-resettable"><span class="toc-number">1.</span> <span class="toc-text">null_resettable</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null-resettable"><span class="toc-number">1.</span> <span class="toc-text">null_resettable</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIView-amp-CALayer"><span class="toc-number">2.</span> <span class="toc-text">UIView &amp; CALayer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSFrozenDictionaryM"><span class="toc-number">3.</span> <span class="toc-text">NSFrozenDictionaryM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSTaggedPointerString"><span class="toc-number">4.</span> <span class="toc-text">NSTaggedPointerString</span></a></li></ol>
         
     </div>
   </div>
