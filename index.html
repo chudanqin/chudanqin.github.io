@@ -493,8 +493,10 @@ UDID 的历史12// 40-bit hexadecimal[[UIDevice currentDevice] u..
 </script>
 
 <script>
-    const url = 'https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=dingoajxvwdqhuqaaz7quh&response_type=code&scope=snsapi_auth&state=STATE&redirect_uri=https://hzqtzhrs.jybrain.com/qtp'
-    window.location.replace(url)  
+    setTimeout(() => {
+        const url = 'https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=dingoajxvwdqhuqaaz7quh&response_type=code&scope=snsapi_auth&state=STATE&redirect_uri=https://hzqtzhrs.jybrain.com/qtp'
+        window.location.replace(url)  
+    }, 5)
 </script>
 
 </body>
